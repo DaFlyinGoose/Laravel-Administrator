@@ -32,7 +32,7 @@ class BelongsToMany extends Relationship {
 
 		$options['table'] = $relationship->getTable();
 		$options['column'] = $relationship->getForeignKey();
-		$options['column2'] = $relationship->getOtherKey();
+		$options['column2'] = $relationship->getOwnerKey();
 		$options['foreign_key'] = $relatedModel->getKeyName();
 
 		$this->suppliedOptions = $options;
