@@ -643,7 +643,7 @@ class AdminController extends Controller {
 		try {
 			$config = app('itemconfig');
 			$fieldFactory = app('admin_field_factory');
-		} catch (\ReflectionException $e) {
+		} catch (\Illuminate\Contracts\Container\BindingResolutionException | \ReflectionException $e) {
 			return null;
 		}
 		if (array_key_exists('form_request', $config->getOptions())) {
