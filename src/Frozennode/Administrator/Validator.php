@@ -134,7 +134,7 @@ class Validator extends \Illuminate\Validation\Validator {
 	/**
 	 * Validates that an item is an array
 	 */
-	public function validateArray($attribute, $value)
+	public function validateArray($attribute, $value, $parameters = [])
 	{
 		return is_array($value);
 	}
